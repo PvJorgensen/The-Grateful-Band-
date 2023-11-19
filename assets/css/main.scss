@@ -22,18 +22,17 @@ header{
     }
 }
 
+
 .hero {
-    position: relative;
     width: 100%;
     height: 100%;
-    background-image: url('../images/pexels-vishnu-r-nair-1105666.jpg');
-    background-size: cover;
-    background-position-x: -150px;
-    background-repeat: no-repeat;
+    max-width: 600px; 
+    position: relative;
+    margin: auto;
     p {
         position: absolute;
         color: white;
-        margin-top: 70px;
+        margin-top: 100px;
         margin-left: 50%;
         transform: translateX(-50%);
         z-index: 999;
@@ -42,20 +41,38 @@ header{
         font-size: 1.3rem;
         font-weight: 600;
     }
-    a {
+    .mySlides {
+        display: none;
+        button {
+            margin-left: 50%;
+            margin-top: 90%;
+            transform: translateX(-50%);
+            border-radius: 50px;
+            width: 100px;
+            background-color: red;
+            border: none;
+            font-size: 1rem;
+            padding: 5px;
+        }
+    }
+    
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 60px 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    .active {
+        background-color: #717171;
+    }
+    img {
         position: absolute;
-        color: white;
-        margin-top: 430px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.2rem;
-        z-index: 1;
-        padding: 2px;
-        background-color: red;
-        border-radius: 20px;
-        width: 100px;
-        text-align: center;
-        text-decoration: none;
+        width: 100%;
+        height: 70vh;
+        opacity: 0.6;
     }
 }
 
@@ -105,12 +122,12 @@ footer {
 
 #menu_items {
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
     z-index: 9999;
-    background-color: white;
+    background-color: lightgray;
     width: 100%;
     
 }
@@ -123,10 +140,12 @@ footer {
     list-style: none;
     margin-left: 50%;
     transform: translateX(-37%);
+    margin-top: 20px;
+    
 }
 
 #menu_items ul li a {
-    text-decoration: none;
+    text-decoration: underline;
     color: black;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
